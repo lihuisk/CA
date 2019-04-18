@@ -33,7 +33,7 @@ public class EightQueen {
                 System.out.println(String.format("put at %d %d, count %d", i, y, eightQueen.flagsCount));
 
 
-                if (y < maxlenth) {
+                if (y < maxlenth - 1) {
                     findInLine(eightQueen, y + 1);
                 } else {
                     return;
@@ -78,7 +78,7 @@ public class EightQueen {
     public static void print(EightQueen eightQueen) {
         for (int i = 0; i < maxlenth; i++) {
             for (int j = 0; j < maxlenth; j++) {
-                System.out.print(eightQueen.flags[i][j] == 0 ? "Q" : "X");
+                System.out.print(eightQueen.flags[i][j] == 0 ? "o" : "x");
             }
             System.out.println();
         }
@@ -86,7 +86,7 @@ public class EightQueen {
     }
 
     public static void putFlag(EightQueen eightQueen, int x, int y) {
-        eightQueen.flags[x][y] = 1;
+        eightQueen.flags[y][x] = 1;
     }
 
     public static boolean iSRowValid(EightQueen eightQueen, int x, int y) {

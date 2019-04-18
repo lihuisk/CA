@@ -11,6 +11,7 @@ public class EightQueenTest {
         EightQueen.print(eightQueen);
     }
 
+
     @Test
     public void findByLine() {
         EightQueen eightQueen = new EightQueen();
