@@ -26,6 +26,9 @@ public class EightQueen {
 
 
     public static void findInLine(EightQueen eightQueen, int y) {
+        if (y == 7) {
+            System.out.println("line 7 ");
+        }
         for (int i = 0; i < maxlenth; i++) {
             if (isValid(eightQueen, i, y)) {
                 putFlag(eightQueen, i, y);
